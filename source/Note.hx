@@ -172,7 +172,13 @@ class Note extends FlxSprite
 						prevNote.animation.play('redhold');
 				}
 
-				prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.8 * PlayState.SONG.speed;
+        //Take into account if the scroll speed is changed to make sustain notes have the correct scale
+				if(FlxG.save.data.scrollSpeed == 1)
+        {
+					prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * PlayState.SONG.speed;
+        } else {
+					prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * FlxG.save.data.scrollSpeed;
+        }
 				prevNote.updateHitbox();
 				// prevNote.setGraphicSize();
 			}

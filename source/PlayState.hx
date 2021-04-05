@@ -595,7 +595,7 @@ class PlayState extends MusicBeatState
 								add(waveSpriteFG);
 						*/
 			}
-			default:
+			case 'tutorial' | 'bopeebo' | 'fresh' | 'dadbattle':
 			{
 					defaultCamZoom = 0.9;
 					curStage = 'stage';
@@ -622,6 +622,10 @@ class PlayState extends MusicBeatState
 
 					add(stageCurtains);
 			}
+      default:
+      {
+        //For Modded Songs
+      }
 		}
 		var gfVersion:String = 'gf';
 

@@ -11,8 +11,8 @@ class KadeEngineData
 		if (FlxG.save.data.downscroll == null)
 			FlxG.save.data.downscroll = false;
 
-		if (FlxG.save.data.dfjk == null)
-			FlxG.save.data.dfjk = false;
+		if (FlxG.save.data.askl == null)
+			FlxG.save.data.askl = false;
 			
 		if (FlxG.save.data.accuracyDisplay == null)
 			FlxG.save.data.accuracyDisplay = true;

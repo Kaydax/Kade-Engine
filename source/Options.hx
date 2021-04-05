@@ -81,9 +81,9 @@ class DFJKOption extends Option
 
 	public override function press():Bool
 	{
-		FlxG.save.data.dfjk = !FlxG.save.data.dfjk;
+		FlxG.save.data.askl = !FlxG.save.data.askl;
 		
-		if (FlxG.save.data.dfjk)
+		if (FlxG.save.data.askl)
 			controls.setKeyboardScheme(KeyboardScheme.Solo, true);
 		else
 			controls.setKeyboardScheme(KeyboardScheme.Duo(true), true);
@@ -94,7 +94,7 @@ class DFJKOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return  FlxG.save.data.dfjk ? "DFJK" : "WASD";
+		return FlxG.save.data.askl ? "ASKL" : "WASD";
 	}
 }
 
